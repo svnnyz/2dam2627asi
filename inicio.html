@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase Completo de Todas las Pantallas</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <!-- Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0f111a;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #2a2e43;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b0c14] text-slate-100 min-h-screen font-sans selection:bg-pink-500 selection:text-white">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0e101cf2] border-b border-slate-800/80 px-6 py-4 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-pink-500/25">
+          <span class="material-symbols-outlined text-white text-2xl">auto_awesome</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-display font-bold text-lg text-white tracking-wide">Social App Design Suite</h1>
+            <span class="text-xs px-2.5 py-0.5 rounded-full font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30">Todas las pantallas</span>
+          </div>
+          <p class="text-xs text-slate-400">4 Universos Estéticos • Feed, Amigos, Reels & Marketplace</p>
+        </div>
+      </div>
+
+      <!-- Quick Filter Chips -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 custom-scrollbar text-xs">
+        <button onclick="filterCategory('all')" id="btn-all" class="filter-btn active px-3.5 py-1.5 rounded-lg font-semibold bg-white text-slate-900 shadow-sm transition-all hover:opacity-90">Todos</button>
+        <button onclick="filterCategory('interactive')" id="btn-interactive" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800/90 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-all">✨ 4 Apps Interactivas</button>
+        <button onclick="filterCategory('pastel')" id="btn-pastel" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800/90 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-all">🌸 Pastel</button>
+        <button onclick="filterCategory('botanico')" id="btn-botanico" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800/90 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-all">🌿 Botánico</button>
+        <button onclick="filterCategory('retro')" id="btn-retro" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800/90 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-all">⚡ Retro Y2K</button>
+        <button onclick="filterCategory('minimal')" id="btn-minimal" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800/90 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-all">🏛️ Minimalista</button>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2 text-right">
+        <span class="text-xs text-slate-400 block">TOTAL PANTALLAS</span>
+        <span class="font-display font-bold text-sm text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">20+ Pantallas</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Showcase -->
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-16">
+    
+    <!-- Hero Banner -->
+    <section class="rounded-3xl p-8 md:p-10 relative overflow-hidden bg-gradient-to-br from-indigo-950/70 via-slate-900 to-purple-950/60 border border-slate-800 shadow-2xl">
+      <div class="absolute -right-12 -top-12 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-3xl space-y-3">
+        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse"></span>
+          Galería y Directorio Completo
+        </span>
+        <h2 class="text-2xl md:text-3xl font-display font-bold tracking-tight text-white">Todas las pantallas y flujos diseñados en un solo lugar</h2>
+        <p class="text-sm md:text-base text-slate-300 leading-relaxed">
+          Explora los 4 universos estéticos completos inspirados en Facebook (Feed de publicación, Sugerencias de Amigos, Reels inmersivos y Marketplace), junto con las 4 maquetas interactivas navegables.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2 text-xs">
+          <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/80">📱 Formato Móvil 390px</span>
+          <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/80">⚡ 4 Flujos interactivos</span>
+          <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/80">🎨 4 Identidades visuales</span>
+          <span class="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/80">📸 Fotografía HD integrada</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: The 4 Interactive Connected Apps -->
+    <section class="category-section" data-cat="interactive">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <span class="text-xs font-bold text-pink-400 uppercase tracking-widest">Navegables con Clics</span>
+          <h3 class="text-xl md:text-2xl font-display font-bold text-white flex items-center gap-2">
+            ✨ Las 4 Apps Interactivas con Flujo Completo
+          </h3>
+          <p class="text-xs md:text-sm text-slate-400">Pasa de una pantalla a otra pulsando en las pestañas inferiores y botones directos.</p>
+        </div>
+        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">4 Aplicaciones</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Interactive 1: Minimalist -->
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-slate-600 transition-all rounded-2xl p-4 flex flex-col group hover:shadow-xl hover:shadow-indigo-500/10">
+          <div class="flex items-center justify-between mb-3 text-xs">
+            <span class="font-semibold text-slate-200 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-slate-400 text-sm">apartment</span>
+              Minimalista
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20">Interactivo</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-xl overflow-hidden relative border border-slate-800 flex items-center justify-center">
+            <img src="minimalista.png" alt="App Interactiva Minimalista" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80">
+            <h4 class="font-bold text-sm text-white">Minimalista Moderno</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Feed nórdico, buscador de amigos, reel de arquitectura y tienda de diseño.</p>
+            <div class="mt-3 flex items-center justify-between text-xs pt-1">
+              <span class="text-slate-500 font-mono">ID: SCREEN_5</span>
+              <a href="https://stitch.withgoogle.com/projects/17495377257030707407" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-400 uppercase tracking-wider hover:underline cursor-pointer">
+            Ver en Stitch
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 2: Botanical -->
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-emerald-600/50 transition-all rounded-2xl p-4 flex flex-col group hover:shadow-xl hover:shadow-emerald-500/10">
+          <div class="flex items-center justify-between mb-3 text-xs">
+            <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-emerald-400 text-sm">potted_plant</span>
+              Botánico
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20">Interactivo</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-xl overflow-hidden relative border border-slate-800 flex items-center justify-center">
+            <img src="botanica.png" alt="App Interactiva Mercado Botánico" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80">
+            <h4 class="font-bold text-sm text-white">Mercado Botánico</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Comunidad botánica, comentarios alineados a la derecha, reel de plantas y marketplace.</p>
+            <div class="mt-3 flex items-center justify-between text-xs pt-1">
+              <span class="text-slate-500 font-mono">ID: SCREEN_7</span>
+              <a href="https://stitch.withgoogle.com/projects/17495377257030707407" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-400 uppercase tracking-wider hover:underline cursor-pointer">
+            Ver en Stitch
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 3: Pastel -->
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-pink-500/50 transition-all rounded-2xl p-4 flex flex-col group hover:shadow-xl hover:shadow-pink-500/10">
+          <div class="flex items-center justify-between mb-3 text-xs">
+            <span class="font-semibold text-pink-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-pink-400 text-sm">palette</span>
+              Tonos Pastel
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20">Interactivo</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-xl overflow-hidden relative border border-slate-800 flex items-center justify-center">
+            <img src="pastel.png" alt="App Interactiva Pastel" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80">
+            <h4 class="font-bold text-sm text-white">Tonos Pastel</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Feed suave lifestyle con fotos HD, amigos en común, reel de cerámica y catálogo.</p>
+            <div class="mt-3 flex items-center justify-between text-xs pt-1">
+              <span class="text-slate-500 font-mono">ID: SCREEN_8</span>
+              <a href="https://stitch.withgoogle.com/projects/17495377257030707407" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-400 uppercase tracking-wider hover:underline cursor-pointer">
+            Ver en Stitch
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 4: Retro Y2K -->
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-yellow-500/50 transition-all rounded-2xl p-4 flex flex-col group hover:shadow-xl hover:shadow-yellow-500/10">
+          <div class="flex items-center justify-between mb-3 text-xs">
+            <span class="font-semibold text-yellow-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-yellow-400 text-sm">bolt</span>
+              Retro Y2K
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20">Interactivo</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-xl overflow-hidden relative border border-slate-800 flex items-center justify-center">
+            <img src="retro.png" alt="App Interactiva Retro Y2K" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80">
+            <h4 class="font-bold text-sm text-white">Retro Pop Neón Y2K</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Estética noventera, trazos negros gruesos, cian y magenta neón vibrantes.</p>
+            <div class="mt-3 flex items-center justify-between text-xs pt-1">
+              <span class="text-slate-500 font-mono">ID: SCREEN_9</span>
+              <a href="https://stitch.withgoogle.com/projects/17495377257030707407" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-400 uppercase tracking-wider hover:underline cursor-pointer">
+            Ver en Stitch
+            </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: Individual Screens by Aesthetic -->
+    
+    <!-- Pastel Aesthetic Collection -->
+    <section class="category-section space-y-4" data-cat="pastel">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-pink-400 uppercase tracking-wider">Colección 1</span>
+          <h3 class="text-lg md:text-xl font-display font-bold text-white flex items-center gap-2">
+            🌸 Estilo Tonos Pastel & Tipografía Suave
+          </h3>
+          <p class="text-xs text-slate-400">Inspirado en la interacción limpia de Facebook con paleta lavanda, melocotón y rosado suave.</p>
+        </div>
+        <span class="text-xs px-2.5 py-0.5 rounded bg-pink-500/10 text-pink-300 border border-pink-500/20">4 Pantallas</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Feed Pastel -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>1. Feed & Publicación</span>
+            <span class="font-mono text-[10px]">SCREEN_66</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="publicacionpastel.png" alt="Publicación Pastel" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Post social con foto, contador de likes, sticker de reacción y comentarios directos.</p>
+        </div>
+
+        <!-- Marketplace Pastel -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>2. Marketplace Pastel</span>
+            <span class="font-mono text-[10px]">SCREEN_57</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="marketplacepastel.png" alt="Marketplace Pastel" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Cuadrícula de productos de diseño, precios y barra de navegación inferior.</p>
+        </div>
+
+        <!-- Amigos Pastel -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>3. Sugerencias Amigos</span>
+            <span class="font-mono text-[10px]">SCREEN_35</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="sugerenciasamigospastel.png" alt="Sugerencias Pastel" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Tarjetas de personas sugeridas con fotos de perfil reales, amigos en común y botones de añadir.</p>
+        </div>
+
+        <!-- Reels Pastel -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>4. Reels Inmersivo</span>
+            <span class="font-mono text-[10px]">SCREEN_20</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="reelspastel.png" alt="Reels Pastel" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Vídeo vertical de alfarería con overlays de likes, comentarios, compartir y audio giratorio.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Botanical Green Aesthetic Collection -->
+    <section class="category-section space-y-4" data-cat="botanico">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Colección 2</span>
+          <h3 class="text-lg md:text-xl font-display font-bold text-white flex items-center gap-2">
+            🌿 Mercado Botánico & Tonos Verdosos
+          </h3>
+          <p class="text-xs text-slate-400">Atmósfera natural en verde salvia, matcha y musgo con tipografía editorial orgánica.</p>
+        </div>
+        <span class="text-xs px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">4 Pantallas</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Feed Botánico -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>1. Publicación Verde</span>
+            <span class="font-mono text-[10px]">SCREEN_64</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="publicacionbotanica.png" alt="Publicación Verde" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Fondo verde completo, foto de Monstera y comentarios con avatar alineado a la derecha.</p>
+        </div>
+
+        <!-- Marketplace Botánico -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>2. Mercado Botánico</span>
+            <span class="font-mono text-[10px]">SCREEN_55</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="marketplacebotanica.png" alt="Marketplace Verde" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Semillas ecológicas, Monstera en terracota, tubos de enraizado y bonsai de olivo.</p>
+        </div>
+
+        <!-- Amigos Botánicos -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>3. Sugerencias Botánicas</span>
+            <span class="font-mono text-[10px]">SCREEN_31</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="sugerenciasamigosbotanica.png" alt="Sugerencias Botánicas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Contactos afines a la jardinería y botánica con el mismo tono verde exacto.</p>
+        </div>
+
+        <!-- Reels Botánico -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>4. Reels Verde</span>
+            <span class="font-mono text-[10px]">SCREEN_17</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="reelsbotanica.png" alt="Reels Verde" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Vídeo vertical en vivero botánico con poda de plantas y controles adaptados.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Retro Neon Y2K Aesthetic Collection -->
+    <section class="category-section space-y-4" data-cat="retro">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider">Colección 3</span>
+          <h3 class="text-lg md:text-xl font-display font-bold text-white flex items-center gap-2">
+            ⚡ Retro Pop Neón Y2K
+          </h3>
+          <p class="text-xs text-slate-400">Colores chillones noventeros, bordes negros gruesos, etiquetas con badges y estilo neo-brutalista.</p>
+        </div>
+        <span class="text-xs px-2.5 py-0.5 rounded bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">4 Pantallas</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Feed Neón -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>1. Publicación Neón</span>
+            <span class="font-mono text-[10px]">SCREEN_60</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="publicacionretro.png" alt="Publicación Neón" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Post noventero con caja de comentarios llamativa, iconos pop y badges de colores.</p>
+        </div>
+
+        <!-- Marketplace Retro -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>2. Marketplace Retro</span>
+            <span class="font-mono text-[10px]">SCREEN_49</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="marketplaceretro.png" alt="Marketplace Retro" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Catálogo retro con tarjetas de alto contraste, precios en amarillo y botones magenta.</p>
+        </div>
+
+        <!-- Amigos Retro -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>3. Sugerencias Retro</span>
+            <span class="font-mono text-[10px]">SCREEN_24</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="marketplaceretro.png" alt="Sugerencias Retro" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">4 tarjetas completas con avatares arcade, badges temáticos y barra inferior encuadrada.</p>
+        </div>
+
+        <!-- Reels Neón -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>4. Reels Neón Y2K</span>
+            <span class="font-mono text-[10px]">SCREEN_14</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="reelsretro.png" alt="Reels Neón" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Vídeo de skater/DJ noventero con overlays pop de alto contraste y audio vinilo.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Minimalist Aesthetic Collection -->
+    <section class="category-section space-y-4" data-cat="minimal">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Colección 4</span>
+          <h3 class="text-lg md:text-xl font-display font-bold text-white flex items-center gap-2">
+            🏛️ Minimalista Moderno (Dimensiones 390 x 986)
+          </h3>
+          <p class="text-xs text-slate-400">Estética escandinava sobria, roble claro, tonos cálidos y tipografía armónica Plus Jakarta Sans.</p>
+        </div>
+        <span class="text-xs px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">4 Pantallas</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Feed Minimalista -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>1. Feed Arquitectura</span>
+            <span class="font-mono text-[10px]">SCREEN_46</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="publicacionminimalista.png" alt="Feed Minimalista" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Publicación de interiorismo de Elena Rostova con tipografía elegante combinada.</p>
+        </div>
+
+        <!-- Marketplace Minimalista -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>2. Marketplace 390×986</span>
+            <span class="font-mono text-[10px]">SCREEN_41</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="marketplaceminimalista.png" alt="Marketplace Minimalista" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Catálogo de mobiliario nórdico adaptado a las medidas exactas especificadas.</p>
+        </div>
+
+        <!-- Amigos Minimalista -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>3. Sugerencias Amigos</span>
+            <span class="font-mono text-[10px]">SCREEN_27</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="sugerenciasamigosinimalista.png" alt="Sugerencias Minimalista" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Tarjetas limpias con avatares circulares, badges sutiles y acciones de amistad claras.</p>
+        </div>
+
+        <!-- Reels Minimalista -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 flex flex-col group">
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+            <span>4. Reels Minimalista</span>
+            <span class="font-mono text-[10px]">SCREEN_11</span>
+          </div>
+          <div class="aspect-[9/16] bg-slate-950 rounded-lg overflow-hidden border border-slate-800/60">
+            <img src="reelsminimalista.png" alt="Reels Minimalista" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform" />
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 line-clamp-2">Reel de arquitectura Studio Kōsen con reproducción vertical limpia y estética sobria.</p>
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="mt-20 border-t border-slate-800/80 bg-[#0e101c] py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-6 space-y-2">
+      <p class="font-medium text-slate-400">Social App Design System & Prototype Suite • Generado con fidelidad completa a todos los bocetos y estilos solicitados.</p>
+      <p class="text-slate-400">4 Flujos Interactivos • 16 Vistas Móviles • Paletas: Pastel, Botánico, Y2K y Minimal</p>
+    </div>
+  </footer>
+
+  <!-- Filter Script -->
+  <script>
+    function filterCategory(cat) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
+        btn.classList.add('bg-slate-800/90', 'text-slate-300');
+      });
+
+      const activeBtn = document.getElementById('btn-' + cat);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-800/90', 'text-slate-300');
+        activeBtn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
+      }
+
+      const sections = document.querySelectorAll('.category-section');
+      sections.forEach(sec => {
+        if (cat === 'all' || sec.dataset.cat === cat || sec.dataset.cat === 'all') {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
